@@ -9,6 +9,12 @@ exports.up = function(knex) {
       .text("name", 128)
       .unique()
       .notNullable();
+    table.text("VIN").notNullable();
+    table.text("make").notNullable();
+    table.text("model").notNullable();
+    table.text("mileage").notNullable();
+    table.text("transmissionType");
+    table.text("statusOfTitle");
     // creates a numeric field called budget which is required
     tbl.decimal("budget").notNullable();
   });
